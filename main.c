@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   trial.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsalimba <fsalimba@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/02 13:31:04 by fsalimba          #+#    #+#             */
+/*   Updated: 2023/08/02 13:41:54 by fsalimba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 // Initialise stack a
@@ -22,7 +34,7 @@ int	main(int ac, char **av)
 // Converts string to long long int
 long int	ft_atol(const char *str)
 {
-	int				mod;
+	int			mod;
 	long int	i;
 
 	i = 0;
@@ -614,7 +626,7 @@ char	**ft_split(char const *s, char c)
 // Finds stack index of element
 int	ft_find_index(t_stack *stack, int num)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (stack->num != num)
@@ -700,7 +712,7 @@ int	ft_lstsize(t_stack *lst)
 // Finds minimum number in stack
 int	ft_find_min(t_stack *stack)
 {
-	int		i;
+	int	i;
 
 	i = stack->num;
 	while (stack)
@@ -715,7 +727,7 @@ int	ft_find_min(t_stack *stack)
 // Finds maximum number in stack
 int	ft_find_max(t_stack *stack)
 {
-	int		i;
+	int	i;
 
 	i = stack->num;
 	while (stack)
@@ -753,7 +765,7 @@ void	ft_rrr(t_stack **a, t_stack **b, int x)
 // The first element becomes the last one.
 // rb (rotate b): Shift up all elements of stack b by 1.
 // The first element becomes the last one.
-void ft_r(t_stack **stack, int x, char c)
+void	ft_r(t_stack **stack, int x, char c)
 {
     t_stack	*temp;
 
