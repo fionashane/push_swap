@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include "../libft/libft.h"
 
 typedef struct s_stack
 {
@@ -29,7 +30,6 @@ void		ft_add_node(t_stack **stack, t_stack *new_node);
 
 int			ft_check_dup(t_stack *stack);
 int			ft_check_sorted(t_stack *stack);
-
 void		ft_free_str(char **str);
 void		ft_free_stack(t_stack **stack);
 void		ft_error_message(void);
@@ -44,11 +44,14 @@ int			ft_find_place_b(t_stack *b, int num_push);
 int			ft_find_place_a(t_stack *a, int num_push);
 
 void		ft_sort(t_stack **stack_a);
-void		ft_sort_three(t_stack **stack_a);
+void		*ft_sort_b(t_stack **stack_a);
 void		ft_sort_bmore(t_stack **a, t_stack **b);
+void		ft_sort_three(t_stack **stack_a);
+t_stack		**ft_sort_a(t_stack **stack_a, t_stack **stack_b);
 
 int			ft_calc_ab(t_stack *a, t_stack *b);
 int			ft_calc_ba(t_stack *a, t_stack *b);
+long int	ft_atol(const char *s);
 
 int			ft_case_rarb_a(t_stack *a, t_stack *b, int x);
 int			ft_case_rrarrb_a(t_stack *a, t_stack *b, int x);
@@ -73,9 +76,5 @@ void		ft_rrs(t_stack **stack, int x, char c);
 void		ft_ss(t_stack **a, t_stack **b, int x);
 void		ft_rr(t_stack **a, t_stack **b, int x);
 void		ft_rrr(t_stack **a, t_stack **b, int x);
-
-int         ft_isdigit(int c);
-char        **ft_split(char const *s, char c);
-long int		ft_atol(const char *s);
 
 #endif
