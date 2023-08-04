@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include "../libft/libft.h"
+# include "libft/libft.h"
 
 typedef struct s_stack
 {
@@ -44,7 +44,7 @@ int			ft_find_place_b(t_stack *b, int num_push);
 int			ft_find_place_a(t_stack *a, int num_push);
 
 void		ft_sort(t_stack **stack_a);
-void		*ft_sort_b(t_stack **stack_a);
+t_stack		*ft_sort_b(t_stack **stack_a);
 void		ft_sort_bmore(t_stack **a, t_stack **b);
 void		ft_sort_three(t_stack **stack_a);
 t_stack		**ft_sort_a(t_stack **stack_a, t_stack **stack_b);

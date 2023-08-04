@@ -6,7 +6,7 @@
 #    By: fsalimba <fsalimba@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/23 12:23:41 by fsalimba          #+#    #+#              #
-#    Updated: 2023/03/23 12:23:44 by fsalimba         ###   ########.fr        #
+#    Updated: 2023/08/04 11:10:15 by fsalimba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ $(NAME):		$(OBJS)
 				$(AR) $(NAME) $(OBJS)
 
 .c.o:
-    $(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+				$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
 				$(RM) $(OBJS)
@@ -45,6 +45,6 @@ clean:
 fclean:			clean
 				$(RM) $(NAME)
 
-re:				fclean all
+re:				fclean $(NAME)
 
-.PHONY:			all clean fclean re
+.PHONY:			all clean fclean re bonus
