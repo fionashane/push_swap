@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_error.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsalimba <fsalimba@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/04 14:21:41 by fsalimba          #+#    #+#             */
+/*   Updated: 2023/08/04 14:21:43 by fsalimba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 // Checks if there are duplicate elements
@@ -37,7 +49,7 @@ int	ft_check_sorted(t_stack *stack)
 
 // Prints error message
 void	ft_error_message(void)
-{	
+{
 	write (2, "Error\n", 6);
 	exit(1);
 }

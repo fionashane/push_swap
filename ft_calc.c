@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calc.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsalimba <fsalimba@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/04 14:09:21 by fsalimba          #+#    #+#             */
+/*   Updated: 2023/08/04 14:18:00 by fsalimba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 // Calculates best rotation to use before pushing elements from b to a
@@ -10,16 +22,16 @@ int	ft_calc_ba(t_stack *a, t_stack *b)
 	i = ft_case_rrarrb_a(a, b, b->num);
 	while (temp)
 	{
-        if (i > ft_case_rarb_a(a, b, temp->num))
-            i = ft_case_rarb_a(a, b, temp->num);
-        if (i > ft_case_rrarrb_a(a, b, temp->num))
-            i = ft_case_rrarrb_a(a, b, temp->num);
-        if (i > ft_case_rarrb_a(a, b, temp->num))
-            i = ft_case_rarrb_a(a, b, temp->num);
-        if (i > ft_case_rrarb_a(a, b, temp->num))
-            i = ft_case_rrarb_a(a, b, temp->num);
+		if (i > ft_case_rarb_a(a, b, temp->num))
+			i = ft_case_rarb_a(a, b, temp->num);
+		if (i > ft_case_rrarrb_a(a, b, temp->num))
+			i = ft_case_rrarrb_a(a, b, temp->num);
+		if (i > ft_case_rarrb_a(a, b, temp->num))
+			i = ft_case_rarrb_a(a, b, temp->num);
+		if (i > ft_case_rrarb_a(a, b, temp->num))
+			i = ft_case_rrarb_a(a, b, temp->num);
 		temp = temp->next;
-    }
+	}
 	return (i);
 }
 
@@ -32,17 +44,17 @@ int	ft_calc_ab(t_stack *a, t_stack *b)
 	temp = a;
 	i = ft_case_rrarrb_b(a, b, a->num);
 	while (temp)
-    {
-        if (i > ft_case_rarb_b(a, b, temp->num))
-            i = ft_case_rarb_b(a, b, temp->num);
-        if (i > ft_case_rrarrb_b(a, b, temp->num))
-            i = ft_case_rrarrb_b(a, b, temp->num);
-        if (i > ft_case_rarrb_b(a, b, temp->num))
-            i = ft_case_rarrb_b(a, b, temp->num);
-        if (i > ft_case_rrarb_b(a, b, temp->num))
-            i = ft_case_rrarb_b(a, b, temp->num);
-        temp = temp->next;
-    }
+	{
+		if (i > ft_case_rarb_b(a, b, temp->num))
+			i = ft_case_rarb_b(a, b, temp->num);
+		if (i > ft_case_rrarrb_b(a, b, temp->num))
+			i = ft_case_rrarrb_b(a, b, temp->num);
+		if (i > ft_case_rarrb_b(a, b, temp->num))
+			i = ft_case_rarrb_b(a, b, temp->num);
+		if (i > ft_case_rrarb_b(a, b, temp->num))
+			i = ft_case_rrarb_b(a, b, temp->num);
+		temp = temp->next;
+	}
 	return (i);
 }
 

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsalimba <fsalimba@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/04 14:27:15 by fsalimba          #+#    #+#             */
+/*   Updated: 2023/08/04 14:27:38 by fsalimba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 // Sorts stack_a if there are only 2 elements
@@ -28,8 +40,8 @@ void	ft_sort(t_stack **stack_a)
 		{
 			while ((*stack_a)->num != ft_find_min(*stack_a))
 				ft_rrs(stack_a, 0, 'a');
-		}			
-	}	
+		}
+	}
 }
 
 // Pushes snd sorts elements to b until only 3 elements are left in a
