@@ -46,7 +46,7 @@ int	ft_calc_ab(t_stack *a, t_stack *b)
 	return (i);
 }
 
-// Converts string to long long int
+// Converts string to long int
 long int	ft_atol(const char *str)
 {
 	int			mod;

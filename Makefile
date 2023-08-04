@@ -1,37 +1,38 @@
-NAME = push_swap
-LIBFTDIR = libft/
-LIBFT = $(LIBFTDIR)libft.a
+NAME 			= push_swap
 
-SRCS = push_swap.c ft_sort.c ft_move.c \
-	   ft_lst.c ft_find.c ft_check_error.c \
-	   ft_case_b.c ft_case_a.c ft_calc.c \
-	   ft_actions_single.c ft_actions_both.c
+LIBFTDIR 		= libft/
+LIBFT 			= $(LIBFTDIR)libft.a
 
-OBJS = $(SRCS:.c=.o)
+SRCS 			=	push_swap.c ft_sort.c ft_move.c \
+	   				ft_lst.c ft_find.c ft_check_error.c \
+	   				ft_case_b.c ft_case_a.c ft_calc.c \
+	   				ft_actions_single.c ft_actions_both.c
 
-CC = gcc
-RM = rm -f
-CFLAGS = -Wall -Wextra -Werror
+OBJS 			= $(SRCS:.c=.o)
 
-all: $(NAME)
+CC 				= gcc
+RM 				= rm -f
+CFLAGS 			= -Wall -Wextra -Werror
 
-$(NAME): $(OBJS) $(LIBFT)
-	$(AR) $(OBJS) -o $(NAME) $(LIBFT)
+all: 			$(NAME)
+
+$(NAME): 		$(OBJS) $(LIBFT)
+				$(CC) $(CFLAGS) $(OBJS) -o $(NAME) $(LIBFT)
 
 $(LIBFT):
-	make -C $(LIBFTDIR)
+				make -C $(LIBFTDIR)
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+				$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-	$(RM) $(OBJS)
-	make -C $(LIBFTDIR) clean
+				make -C $(LIBFTDIR) clean
+				$(RM) $(OBJS)
 
-fclean: clean
-	$(RM) $(NAME)
-	make -C $(LIBFTDIR) fclean
+fclean: 		clean
+				make -C $(LIBFTDIR) fclean
+				$(RM) $(NAME)
 
-re: fclean all
+re: 			fclean all
 
-.PHONY: all clean fclean re
+.PHONY: 		all clean fclean re
