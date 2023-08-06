@@ -13,49 +13,49 @@
 #include "push_swap.h"
 
 // Calculates the total number of moves when ra and rb is used.
-int	ft_case_rarb_b(t_stack *a, t_stack *b, int x)
+int	ft_case_rarb(t_stack *from, t_stack *to, int x)
 {
 	int	i;
 
-	i = ft_find_place_b(b, x);
-	if (i < ft_find_index(a, x))
-		i = ft_find_index(a, x);
-	return (i);
-}
-
-// Calculates the total number of moves when rra and rrb is used.
-int	ft_case_rrarrb_b(t_stack *a, t_stack *b, int x)
-{
-	int	i;
-
-	i = 0;
-	if (ft_find_place_b(b, x))
-		i = ft_lstsize(b) - ft_find_place_b(b, x);
-	if ((i < (ft_lstsize(a) - ft_find_index(a, x))) && ft_find_index(a, x))
-		i = ft_lstsize(a) - ft_find_index(a, x);
-	return (i);
-}
-
-// Calculates the total number of moves when rra and rb is used.
-int	ft_case_rrarb_b(t_stack *a, t_stack *b, int x)
-{
-	int	i;
-
-	i = 0;
-	if (ft_find_index(a, x))
-		i = ft_lstsize(a) - ft_find_index(a, x);
-	i += ft_find_place_b(b, x);
+	i = ft_find_place(to, x);
+	if (i < ft_find_index(from, x))
+		i = ft_find_index(from, x);
 	return (i);
 }
 
 // Calculates the total number of moves when ra and rrb is used.
-int	ft_case_rarrb_b(t_stack *a, t_stack *b, int x)
+int	ft_case_rarrb(t_stack *from, t_stack *to, int x)
 {
 	int	i;
 
 	i = 0;
-	if (ft_find_place_b(b, x))
-		i = ft_lstsize(b) - ft_find_place_b(b, x);
-	i += ft_find_index(a, x);
+	if (ft_find_index(from, x))
+		i = ft_lstsize(from) - ft_find_index(from, x);
+	i += ft_find_place(to, x);
+	return (i);
+}
+
+// Calculates the total number of moves when rra and rb is used.
+int	ft_case_rrarb(t_stack *from, t_stack *to, int x)
+{
+	int	i;
+
+	i = 0;
+	if (ft_find_place(to, x))
+		i = ft_lstsize(to) - ft_find_place(to, x);
+	i += ft_find_index(from, x);
+	return (i);
+}
+
+// Calculates the total number of moves when rra and rrb is used.
+int	ft_case_rrarrb(t_stack *from, t_stack *to, int x)
+{
+	int	i;
+
+	i = 0;
+	if (ft_find_place(to, x))
+		i = ft_lstsize(to) - ft_find_place(to, x);
+	if ((i < (ft_lstsize(from) - ft_find_index(from, x))) && ft_find_index(from, x))
+		i = ft_lstsize(from) - ft_find_index(from, x);
 	return (i);
 }
