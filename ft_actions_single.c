@@ -60,12 +60,12 @@ void	ft_p(t_stack **from, t_stack **to, int x, char c)
 {
 	t_stack	*temp;
 
-	if (!*to)
+	if (!*from)
 		return ;
-	temp = *from;
-	*from = *to;
-	*to = (*to)->next;
-	(*from)->next = temp;
+	temp = *to;
+	*to = *from;
+	*from = (*from)->next;
+	(*to)->next = temp;
 	if (x == 0 && c == 'a')
 		write(1, "pa\n", 3);
 	if (x == 0 && c == 'b')
