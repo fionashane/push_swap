@@ -71,16 +71,16 @@ void	ft_sort_bmore(t_stack **stack_a, t_stack **stack_b)
 	while (ft_lstsize(*stack_a) > 3 && !ft_check_sorted(*stack_a))
 	{
 		temp = *stack_a;
-		i = ft_calc_ab(*stack_a, *stack_b);
+		i = ft_calc(*stack_a, *stack_b, 'a');
 		while (i >= 0)
 		{
 			if (i == ft_case_rarb(*stack_a, *stack_b, temp->num))
 				i = ft_move_rarb(stack_a, stack_b, temp->num, 'a');
 			else if (i == ft_case_rrarrb(*stack_a, *stack_b, temp->num))
 				i = ft_move_rrarrb(stack_a, stack_b, temp->num, 'a');
-			else if (i == ft_case_rarrb(*stack_a, *stack_b, temp->num))
+			else if (i == ft_case_rarrb(*stack_a, *stack_b, temp->num, 'a'))
 				i = ft_move_rarrb(stack_a, stack_b, temp->num, 'a');
-			else if (i == ft_case_rrarb(*stack_a, *stack_b, temp->num))
+			else if (i == ft_case_rrarb(*stack_a, *stack_b, temp->num, 'a'))
 				i = ft_move_rrarb(stack_a, stack_b, temp->num, 'a');
 			else
 				temp = temp->next;
@@ -120,16 +120,16 @@ t_stack	**ft_sort_a(t_stack **stack_a, t_stack **stack_b)
 	while (*stack_b)
 	{
 		temp = *stack_b;
-		i = ft_calc_ba(*stack_b, *stack_a);
+		i = ft_calc(*stack_b, *stack_a, 'b');
 		while (i >= 0)
 		{
 			if (i == ft_case_rarb(*stack_b, *stack_a, temp->num))
 				i = ft_move_rarb(stack_a, stack_b, temp->num, 'b');
-			else if (i == ft_case_rarrb(*stack_b, *stack_a, temp->num))
+			else if (i == ft_case_rarrb(*stack_a, *stack_b, temp->num, 'b'))
 				i = ft_move_rarrb(stack_a, stack_b, temp->num, 'b');
 			else if (i == ft_case_rrarrb(*stack_b, *stack_a, temp->num))
 				i = ft_move_rrarrb(stack_a, stack_b, temp->num, 'b');
-			else if (i == ft_case_rrarb(*stack_b, *stack_a, temp->num))
+			else if (i == ft_case_rrarb(*stack_a, *stack_b, temp->num, 'b'))
 				i = ft_move_rrarb(stack_a, stack_b, temp->num, 'b');
 			else
 				temp = temp->next;

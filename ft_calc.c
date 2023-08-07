@@ -13,7 +13,7 @@
 #include "push_swap.h"
 
 // Calculates best rotation to use before pushing elements from stack "from" to stack "to"
-int	ft_calc(t_stack *from, t_stack *to)
+int	ft_calc(t_stack *from, t_stack *to, char c)
 {
 	int		i;
 	t_stack	*temp;
@@ -26,10 +26,10 @@ int	ft_calc(t_stack *from, t_stack *to)
 			i = ft_case_rarb(from, to, temp->num);
 		if (i > ft_case_rrarrb(from, to, temp->num))
 			i = ft_case_rrarrb(from, to, temp->num);
-		if (i > ft_case_rarrb(from, to, temp->num))
-			i = ft_case_rarrb(from, to, temp->num);
-		if (i > ft_case_rrarb(from, to, temp->num))
-			i = ft_case_rrarb(from, to, temp->num);
+		if (i > ft_case_rarrb(from, to, temp->num, c))
+			i = ft_case_rarrb(from, to, temp->num, c);
+		if (i > ft_case_rrarb(from, to, temp->num, c))
+			i = ft_case_rrarb(from, to, temp->num, c);
 		temp = temp->next;
 	}
 	return (i);

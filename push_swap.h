@@ -45,15 +45,15 @@ void		ft_sort_bmore(t_stack **a, t_stack **b);
 void		ft_sort_three(t_stack **stack_a);
 t_stack		**ft_sort_a(t_stack **stack_a, t_stack **stack_b);
 
-int			ft_calc(t_stack *from, t_stack *to);
+int			ft_calc(t_stack *from, t_stack *to, char c);
 long int	ft_atol(const char *s);
 t_stack		*ft_lstlast(t_stack *lst);
 int			ft_lstsize(t_stack *lst);
 
 int			ft_case_rarb(t_stack *from, t_stack *to, int x);
 int			ft_case_rrarrb(t_stack *from, t_stack *to, int x);
-int			ft_case_rrarb(t_stack *from, t_stack *to, int x);
-int			ft_case_rarrb(t_stack *from, t_stack *to, int x);
+int			ft_case_rrarb(t_stack *from, t_stack *to, int x, char c);
+int			ft_case_rarrb(t_stack *from, t_stack *to, int x, char c);
 
 int			ft_move_rarb(t_stack **a, t_stack **b, int x, char s);
 int			ft_move_rrarrb(t_stack **a, t_stack **b, int x, char s);
