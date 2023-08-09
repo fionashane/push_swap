@@ -6,7 +6,7 @@
 /*   By: fsalimba <fsalimba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 13:31:04 by fsalimba          #+#    #+#             */
-/*   Updated: 2023/08/04 14:28:10 by fsalimba         ###   ########.fr       */
+/*   Updated: 2023/08/09 16:11:01 by fsalimba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ int	main(int ac, char **av)
 {
 	t_stack	*a;
 
+	if (ac <= 1)
+		return (0);
 	a = ft_init_stack(ac, av);
+	if (ft_check_sorted(a))
+		return (0);
 	if (!a || ft_check_dup(a))
 	{
 		ft_free_stack(&a);

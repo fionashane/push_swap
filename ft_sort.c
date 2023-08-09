@@ -6,7 +6,7 @@
 /*   By: fsalimba <fsalimba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 14:27:15 by fsalimba          #+#    #+#             */
-/*   Updated: 2023/08/04 14:27:38 by fsalimba         ###   ########.fr       */
+/*   Updated: 2023/08/09 16:11:30 by fsalimba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ void	ft_sort(t_stack **stack_a)
 
 	stack_b = NULL;
 	if (ft_lstsize(*stack_a) == 2)
-		ft_s(stack_a, 0, 'a');
-	else if (ft_lstsize(*stack_a) > 2 && ft_check_sorted((*stack_a)->next))
 		ft_s(stack_a, 0, 'a');
 	else
 	{
