@@ -56,16 +56,19 @@ void	ft_s(t_stack **stack, int x, char c)
 // pa (push a): Take the first element at the top of b and
 // put it at the top of a.
 // Do nothing if b is empty.
+// pb (push b): Take the first element at the top of a and
+// put it at the top of b.
+// Do nothing if a is empty.
 void	ft_p(t_stack **from, t_stack **to, int x, char c)
 {
 	t_stack	*temp;
 
-	if (!*from)
+	if (!*to)
 		return ;
-	temp = *to;
-	*to = *from;
-	*from = (*from)->next;
-	(*to)->next = temp;
+	temp = *from;
+	*from = *to;
+	*to = (*to)->next;
+	(*from)->next = temp;
 	if (x == 0 && c == 'a')
 		write(1, "pa\n", 3);
 	if (x == 0 && c == 'b')

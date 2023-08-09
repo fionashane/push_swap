@@ -34,10 +34,14 @@ void		ft_free_str(char **str);
 void		ft_free_stack(t_stack **stack);
 void		ft_error_message(void);
 
+t_stack		*ft_lstlast(t_stack *lst);
+int			ft_lstsize(t_stack *lst);
+
 int			ft_find_min(t_stack *stack);
 int			ft_find_max(t_stack *stack);
 int			ft_find_index(t_stack *stack, int num);
-int			ft_find_place(t_stack *stack, int num_push);
+int			ft_find_place_b(t_stack *b, int num_push);
+int			ft_find_place_a(t_stack *a, int num_push);
 
 void		ft_sort(t_stack **stack_a);
 t_stack		*ft_sort_b(t_stack **stack_a);
@@ -45,15 +49,19 @@ void		ft_sort_bmore(t_stack **a, t_stack **b);
 void		ft_sort_three(t_stack **stack_a);
 t_stack		**ft_sort_a(t_stack **stack_a, t_stack **stack_b);
 
-int			ft_calc(t_stack *from, t_stack *to, char c);
+int			ft_calc_ab(t_stack *a, t_stack *b);
+int			ft_calc_ba(t_stack *a, t_stack *b);
 long int	ft_atol(const char *s);
-t_stack		*ft_lstlast(t_stack *lst);
-int			ft_lstsize(t_stack *lst);
 
-int			ft_case_rarb(t_stack *from, t_stack *to, int x);
-int			ft_case_rrarrb(t_stack *from, t_stack *to, int x);
-int			ft_case_rrarb(t_stack *from, t_stack *to, int x, char c);
-int			ft_case_rarrb(t_stack *from, t_stack *to, int x, char c);
+int			ft_case_rarb_a(t_stack *a, t_stack *b, int x);
+int			ft_case_rrarrb_a(t_stack *a, t_stack *b, int x);
+int			ft_case_rarrb_a(t_stack *a, t_stack *b, int x);
+int			ft_case_rrarb_a(t_stack *a, t_stack *b, int x);
+
+int			ft_case_rarb_b(t_stack *a, t_stack *b, int x);
+int			ft_case_rrarrb_b(t_stack *a, t_stack *b, int x);
+int			ft_case_rrarb_b(t_stack *a, t_stack *b, int x);
+int			ft_case_rarrb_b(t_stack *a, t_stack *b, int x);
 
 int			ft_move_rarb(t_stack **a, t_stack **b, int x, char s);
 int			ft_move_rrarrb(t_stack **a, t_stack **b, int x, char s);

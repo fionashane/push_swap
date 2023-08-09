@@ -12,24 +12,47 @@
 
 #include "push_swap.h"
 
-// Calculates best rotation to use before pushing elements from stack "from" to stack "to"
-int	ft_calc(t_stack *from, t_stack *to, char c)
+// Calculates best rotation to use before pushing elements from b to a
+int	ft_calc_ba(t_stack *a, t_stack *b)
 {
 	int		i;
 	t_stack	*temp;
 
-	temp = from;
-	i = ft_case_rrarrb(from, to, from->num);
+	temp = b;
+	i = ft_case_rrarrb_a(a, b, b->num);
 	while (temp)
 	{
-		if (i > ft_case_rarb(from, to, temp->num))
-			i = ft_case_rarb(from, to, temp->num);
-		if (i > ft_case_rrarrb(from, to, temp->num))
-			i = ft_case_rrarrb(from, to, temp->num);
-		if (i > ft_case_rarrb(from, to, temp->num, c))
-			i = ft_case_rarrb(from, to, temp->num, c);
-		if (i > ft_case_rrarb(from, to, temp->num, c))
-			i = ft_case_rrarb(from, to, temp->num, c);
+		if (i > ft_case_rarb_a(a, b, temp->num))
+			i = ft_case_rarb_a(a, b, temp->num);
+		if (i > ft_case_rrarrb_a(a, b, temp->num))
+			i = ft_case_rrarrb_a(a, b, temp->num);
+		if (i > ft_case_rarrb_a(a, b, temp->num))
+			i = ft_case_rarrb_a(a, b, temp->num);
+		if (i > ft_case_rrarb_a(a, b, temp->num))
+			i = ft_case_rrarb_a(a, b, temp->num);
+		temp = temp->next;
+	}
+	return (i);
+}
+
+// Calculates best rotation to use before pushing elements from a to b
+int	ft_calc_ab(t_stack *a, t_stack *b)
+{
+	int		i;
+	t_stack	*temp;
+
+	temp = a;
+	i = ft_case_rrarrb_b(a, b, a->num);
+	while (temp)
+	{
+		if (i > ft_case_rarb_b(a, b, temp->num))
+			i = ft_case_rarb_b(a, b, temp->num);
+		if (i > ft_case_rrarrb_b(a, b, temp->num))
+			i = ft_case_rrarrb_b(a, b, temp->num);
+		if (i > ft_case_rarrb_b(a, b, temp->num))
+			i = ft_case_rarrb_b(a, b, temp->num);
+		if (i > ft_case_rrarb_b(a, b, temp->num))
+			i = ft_case_rrarb_b(a, b, temp->num);
 		temp = temp->next;
 	}
 	return (i);
@@ -63,28 +86,4 @@ long int	ft_atol(const char *str)
 	if ((mod * i) > 2147483647 || (mod * i) < -2147483648)
 		ft_error_message();
 	return (mod * i);
-}
-
-t_stack	*ft_lstlast(t_stack *lst)
-{
-	while (lst)
-	{
-		if (!lst->next)
-			return (lst);
-		lst = lst->next;
-	}
-	return (lst);
-}
-
-int	ft_lstsize(t_stack *lst)
-{
-	int	i;
-
-	i = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
 }
