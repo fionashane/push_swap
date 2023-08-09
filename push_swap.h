@@ -53,15 +53,10 @@ int			ft_calc_ab(t_stack *a, t_stack *b);
 int			ft_calc_ba(t_stack *a, t_stack *b);
 long int	ft_atol(const char *s);
 
-int			ft_case_rarb_a(t_stack *a, t_stack *b, int x);
-int			ft_case_rrarrb_a(t_stack *a, t_stack *b, int x);
-int			ft_case_rarrb_a(t_stack *a, t_stack *b, int x);
-int			ft_case_rrarb_a(t_stack *a, t_stack *b, int x);
-
-int			ft_case_rarb_b(t_stack *a, t_stack *b, int x);
-int			ft_case_rrarrb_b(t_stack *a, t_stack *b, int x);
-int			ft_case_rrarb_b(t_stack *a, t_stack *b, int x);
-int			ft_case_rarrb_b(t_stack *a, t_stack *b, int x);
+int			ft_case_rarb(t_stack *a, t_stack *b, int x, char c);
+int			ft_case_rrarrb(t_stack *a, t_stack *b, int x, char c);
+int			ft_case_rarrb(t_stack *a, t_stack *b, int x, char c);
+int			ft_case_rrarb(t_stack *a, t_stack *b, int x, char c);
 
 int			ft_move_rarb(t_stack **a, t_stack **b, int x, char s);
 int			ft_move_rrarrb(t_stack **a, t_stack **b, int x, char s);

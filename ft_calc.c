@@ -19,17 +19,17 @@ int	ft_calc_ba(t_stack *a, t_stack *b)
 	t_stack	*temp;
 
 	temp = b;
-	i = ft_case_rrarrb_a(a, b, b->num);
+	i = ft_case_rrarrb(a, b, b->num, 'b');
 	while (temp)
 	{
-		if (i > ft_case_rarb_a(a, b, temp->num))
-			i = ft_case_rarb_a(a, b, temp->num);
-		if (i > ft_case_rrarrb_a(a, b, temp->num))
-			i = ft_case_rrarrb_a(a, b, temp->num);
-		if (i > ft_case_rarrb_a(a, b, temp->num))
-			i = ft_case_rarrb_a(a, b, temp->num);
-		if (i > ft_case_rrarb_a(a, b, temp->num))
-			i = ft_case_rrarb_a(a, b, temp->num);
+		if (i > ft_case_rarb(a, b, temp->num, 'b'))
+			i = ft_case_rarb(a, b, temp->num, 'b');
+		if (i > ft_case_rrarrb(a, b, temp->num, 'b'))
+			i = ft_case_rrarrb(a, b, temp->num, 'b');
+		if (i > ft_case_rarrb(a, b, temp->num, 'b'))
+			i = ft_case_rarrb(a, b, temp->num, 'b');
+		if (i > ft_case_rrarb(a, b, temp->num, 'b'))
+			i = ft_case_rrarb(a, b, temp->num, 'b');
 		temp = temp->next;
 	}
 	return (i);
@@ -42,17 +42,17 @@ int	ft_calc_ab(t_stack *a, t_stack *b)
 	t_stack	*temp;
 
 	temp = a;
-	i = ft_case_rrarrb_b(a, b, a->num);
+	i = ft_case_rrarrb(a, b, a->num, 'a');
 	while (temp)
 	{
-		if (i > ft_case_rarb_b(a, b, temp->num))
-			i = ft_case_rarb_b(a, b, temp->num);
-		if (i > ft_case_rrarrb_b(a, b, temp->num))
-			i = ft_case_rrarrb_b(a, b, temp->num);
-		if (i > ft_case_rarrb_b(a, b, temp->num))
-			i = ft_case_rarrb_b(a, b, temp->num);
-		if (i > ft_case_rrarb_b(a, b, temp->num))
-			i = ft_case_rrarb_b(a, b, temp->num);
+		if (i > ft_case_rarb(a, b, temp->num, 'a'))
+			i = ft_case_rarb(a, b, temp->num, 'a');
+		if (i > ft_case_rrarrb(a, b, temp->num, 'a'))
+			i = ft_case_rrarrb(a, b, temp->num, 'a');
+		if (i > ft_case_rarrb(a, b, temp->num, 'a'))
+			i = ft_case_rarrb(a, b, temp->num, 'a');
+		if (i > ft_case_rrarb(a, b, temp->num, 'a'))
+			i = ft_case_rrarb(a, b, temp->num, 'a');
 		temp = temp->next;
 	}
 	return (i);

@@ -50,7 +50,7 @@ int	ft_check_sorted(t_stack *stack)
 // Prints error message
 void	ft_error_message(void)
 {
-	write (2, "Error\n", 6);
+	write (1, "Error\n", 6);
 	exit(1);
 }
 
