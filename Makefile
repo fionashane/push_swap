@@ -15,9 +15,8 @@ NAME 			= push_swap
 LIBFTDIR 		= libft/
 LIBFT 			= $(LIBFTDIR)libft.a
 
-SRCS 			=	push_swap.c ft_sort.c ft_move.c \
-	   				ft_lst.c ft_find.c ft_check_error.c \
-	   				ft_case.c ft_calc.c \
+SRCS 			=	push_swap.c ft_sort.c ft_move.c ft_lst.c \
+	   				ft_find.c ft_check_error.c ft_case.c ft_calc.c \
 	   				ft_actions_single.c ft_actions_both.c
 
 OBJS 			= $(SRCS:.c=.o)
