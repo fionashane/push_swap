@@ -22,8 +22,6 @@ int	main(int ac, char **av)
 	if (ac <= 1)
 		return (0);
 	a = ft_init_stack(ac, av);
-	if (ft_check_sorted(a))
-		return (0);
 	if (!a || ft_check_dup(a))
 	{
 		ft_free_stack(&a);
@@ -60,6 +58,8 @@ t_stack	*ft_init_stack(int ac, char **av)
 			i++;
 		}
 	}
+	if (!a)
+		ft_free_stack(&a);
 	return (a);
 }
 
