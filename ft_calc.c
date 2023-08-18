@@ -59,7 +59,7 @@ int	ft_calc_ab(t_stack *a, t_stack *b)
 }
 
 // Converts string to long int
-long int	ft_atol(const char *str)
+long int	ft_atol(const char *str, t_stack **stack)
 {
 	int			mod;
 	long int	i;
@@ -79,11 +79,11 @@ long int	ft_atol(const char *str)
 	while (*str)
 	{
 		if (!ft_isdigit(*str))
-			ft_error_message();
+			ft_error_message(stack);
 		i = i * 10 + (*str - 48);
 		str++;
 	}
 	if ((mod * i) > 2147483647 || (mod * i) < -2147483648)
-		ft_error_message();
+		ft_error_message(stack);
 	return (mod * i);
 }

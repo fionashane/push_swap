@@ -23,10 +23,7 @@ int	main(int ac, char **av)
 		return (0);
 	a = ft_init_stack(ac, av);
 	if (!a || ft_check_dup(a))
-	{
-		ft_free_stack(&a);
-		ft_error_message();
-	}
+		ft_error_message(&a);
 	if (!ft_check_sorted(a))
 		ft_sort(&a);
 	ft_free_stack(&a);
@@ -46,14 +43,14 @@ t_stack	*ft_init_stack(int ac, char **av)
 	i = 1;
 	a = NULL;
 	if (ac < 2)
-		ft_error_message();
+		ft_error_message(&a);
 	if (ac == 2)
 		a = ft_split_quoted(av);
 	else
 	{
 		while (i < ac)
 		{
-			j = ft_atol(av[i]);
+			j = ft_atol(av[i], &a);
 			ft_add_node(&a, ft_init_node(j));
 			i++;
 		}
@@ -77,7 +74,7 @@ t_stack	*ft_split_quoted(char **av)
 	temp = ft_split(av[1], 32);
 	while (temp[i])
 	{
-		j = ft_atol(temp[i]);
+		j = ft_atol(temp[i], &a);
 		ft_add_node(&a, ft_init_node(j));
 		i++;
 	}
@@ -93,7 +90,7 @@ t_stack	*ft_init_node(int number)
 
 	new = malloc(sizeof (t_stack));
 	if (!new)
-		ft_error_message();
+		ft_error_message(&new);
 	new->num = number;
 	new->next = NULL;
 	return (new);

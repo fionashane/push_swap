@@ -48,8 +48,9 @@ int	ft_check_sorted(t_stack *stack)
 }
 
 // Prints error message
-void	ft_error_message(void)
+void	ft_error_message(t_stack **stack)
 {
+	ft_free_stack(stack);
 	write (1, "Error\n", 6);
 	exit(1);
 }
