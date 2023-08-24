@@ -1,8 +1,8 @@
-# Push_Swap - 42 Project
+# push_swap - 42 Project
 
-![Push_Swap](https://img.shields.io/badge/Push_Swap-42-success)
+![push_swap](https://img.shields.io/badge/push_swap-42-success)
 
-The **Push_Swap** project is part of the curriculum at [42 Adelaide](https://www.42adelaide.com/) and involves sorting a stack of numbers using a specific set of operations with the fewest possible moves.
+The **push_swap** project is part of the curriculum at [42 Adelaide](https://www.42adelaide.com/) and involves sorting a stack of numbers using a specific set of operations with the fewest possible moves.
 
 ## Project Objectives
 
@@ -14,7 +14,7 @@ The project aims to improve your algorithmic thinking and problem-solving skills
 
 ## How to use
 
-To use the **Push_Swap** program, you need to:
+To use the **push_swap** program, you need to:
 1. Clone the repository to your local machine
 ```bash
 git clone https://github.com/your_username/push_swap.git
@@ -34,7 +34,7 @@ make
 
 ## Sorting Algorithm
 
-The **Push_Swap** program uses a sorting algorithm that utilises two stacks, referred to as Stack A and Stack B. The program takes an unsorted list of integers and uses a combination of operations (swap, push, rotate, and reverse rotate) to sort them in ascending order.
+The **push_swap** program uses a sorting algorithm that utilises two stacks, referred to as Stack A and Stack B. The program takes an unsorted list of integers and uses a combination of operations (swap, push, rotate, and reverse rotate) to sort them in ascending order.
 
 ## Example Output
 
@@ -45,7 +45,3 @@ ra
 ```
 
 This sequence of instructions would swap the first two elements of Stack A (sa) and then rotate the remaining elements in Stack A by one position (ra).
-
-## Credits
-
-The **Push_Swap** project was developed by [42 Adelaide](https://www.42adel.org.au).
