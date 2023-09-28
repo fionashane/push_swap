@@ -1,8 +1,8 @@
-# push_swap - 42 Project
+# push_swap
 
 ![push_swap](https://img.shields.io/badge/push_swap-42-success)
 
-The **push_swap** project is part of the curriculum at [42 Adelaide](https://www.42adelaide.com/) and involves sorting a stack of numbers using a specific set of operations with the fewest possible moves.
+The **push_swap** project is part of the curriculum at [42 Adelaide](https://www.42adel.org.au) and involves sorting a stack of numbers using a specific set of operations with the fewest possible moves.
 
 ## Project Objectives
 
@@ -17,7 +17,7 @@ The project aims to improve your algorithmic thinking and problem-solving skills
 To use the **push_swap** program, you need to:
 1. Clone the repository to your local machine
 ```bash
-git clone https://github.com/your_username/push_swap.git
+git clone https://github.com/fionashane/push_swap.git
 ```
 
 2. Compile the program using the provided Makefile
