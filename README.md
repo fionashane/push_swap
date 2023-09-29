@@ -1,4 +1,4 @@
-# push_swap
+# push_swap - 42 Project
 
 ![push_swap](https://img.shields.io/badge/push_swap-42-success)
 
